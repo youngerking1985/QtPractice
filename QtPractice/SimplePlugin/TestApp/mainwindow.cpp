@@ -36,6 +36,7 @@ void MainWindow::loadPlugins()
         if (plugin) {
             qDebug() << "plugin---" << fileName;
             _test = dynamic_cast<MyInterface*>(plugin);
+            plugin->setParent(this);
         }
     }
 }

@@ -1,7 +1,8 @@
 #include <QDebug>
 #include "testplugin.h"
 
-TestPlugin::TestPlugin()
+TestPlugin::TestPlugin(QObject* parent)
+    :QObject(parent)
 {
     qDebug() << "TestPlugin::TestPlugin";
 }
